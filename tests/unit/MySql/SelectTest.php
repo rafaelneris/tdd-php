@@ -4,6 +4,11 @@ namespace RafaelNeris\QueryBuilder\MySql;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class SelectTest
+ * @package RafaelNeris\QueryBuilder\MySql
+ * @author Rafael Neris <rafaelnerisdj@gmail.com>
+ */
 class SelectTest extends TestCase
 {
     public function testSelectSemFiltro()

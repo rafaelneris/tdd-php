@@ -4,6 +4,11 @@ namespace RafaelNeris\QueryBuilder\MySql;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class FilterTest
+ * @package RafaelNeris\QueryBuilder\MySql
+ * @author Rafael Neris <rafaelnerisdj@gmail.com>
+ */
 class FilterTest extends TestCase
 {
     public function testWhere() {

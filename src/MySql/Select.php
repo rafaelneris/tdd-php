@@ -3,34 +3,44 @@
 
 namespace RafaelNeris\QueryBuilder\MySql;
 
-
+/**
+ * Class Select
+ * @package RafaelNeris\QueryBuilder\MySql
+ * @author Rafael Neris <rafaelnerisdj@gmail.com>
+ */
 class Select
 {
+    /** @var string */
     private $table;
 
+    /** @var array  */
     private $fields = [];
 
+    /** @var string */
     private $filter;
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getTable()
+    public function getTable() : string
     {
         return $this->table;
     }
 
     /**
-     * @param $table
+     * @param string $table
      * @return $this
      */
-    public function setTable($table)
+    public function setTable(string $table) : Select
     {
         $this->table = $table;
         return $this;
     }
 
-    public function getSql()
+    /**
+     * @return string
+     */
+    public function getSql() : string
     {
         $fields = '*';
         if (!empty($this->fields)) {
@@ -45,13 +55,21 @@ class Select
         return sprintf("SELECT %s FROM %s%s;", $fields, $this->table, $filter);
     }
 
-    public function fields(array $fields)
+    /**
+     * @param array $fields
+     * @return $this
+     */
+    public function fields(array $fields) : Select
     {
         $this->fields = $fields;
         return $this;
     }
 
-    public function filter(Filter $filter)
+    /**
+     * @param Filter $filter
+     * @return Filter
+     */
+    public function filter(Filter $filter) : Select
     {
         $this->filter = $filter->getSql();
         return $this;
