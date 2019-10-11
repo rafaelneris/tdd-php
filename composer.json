@@ -1,0 +1,18 @@
+{
+    "name": "rafaelneris/query-builder",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rafael Neris",
+            "email": "rafaelnerisdj@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^8.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "RafaelNeris\\QueryBuilder\\": "src"
+        }
+    }
+}
